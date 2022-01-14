@@ -10,9 +10,11 @@ const devConfig = {
   },
   devServer: {
     port: 8080,
-    historyApiFallback: {
+    // It's wrong setting:
+    /* historyApiFallback: {
       index: 'index.html',
-    },
+    }, */
+    historyApiFallback: true,
   },
   plugins: [
     new ModuleFederationPlugin({
